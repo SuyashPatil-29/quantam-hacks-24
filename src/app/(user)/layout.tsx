@@ -1,4 +1,4 @@
-import '../../styles/globals.css'
+import "../../styles/globals.css"
 import { Inter } from 'next/font/google'
 import Header from '../components/Header'
 import Banner from '../components/Banner'
@@ -18,10 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-[rgb(23,23,23)]`}>
+      <body>
       <header className='lg:mx-[162px]'>
       <Header />
-      <Banner heading='Latest Posts'/>
+      <Banner heading='Latest Posts' />
       <hr className="border-[#F7AB0A] my-14 dark:bg-white bg-black dark:h-0 h-1"/>
         {children}
       </header>

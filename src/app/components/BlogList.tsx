@@ -13,7 +13,7 @@ function BlogList({posts}:Props) {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:w-fit px-8">
         {posts.map((post)=>{
             return(
-                <HomePageCard key={post._id} image={urlFor(post.mainImage).url()} heading={post.title} description={post.description} category={post.categories} link={`/blog/${post.slug.current}`} createdAt={post._createdAt}/>
+                <HomePageCard key={post._id} image={urlFor(post.mainImage).url()} heading={post.title} description={post.description} category={post.categories} link={`/blog/${post.slug.current}`} createdAt={post._createdAt} author = {post.author.name}/>
             )
         })}
       </div>
