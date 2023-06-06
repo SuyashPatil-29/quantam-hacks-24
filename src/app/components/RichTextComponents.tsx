@@ -24,10 +24,10 @@ export const RichTextComponents = {
     },
 
     block: {
-        h1: ({children} :any) => <h1 className="text-3xl font-bold md:text-3xl dark:text-pink-700 text-violet-400 py-4">{children}</h1>,
-        h2: ({children} :any) => <h2 className="text-3xl font-bold md:text-3xl dark:text-pink-700 text-violet-400 py-4">{children}</h2>,
+        h1: ({children} :any) => <h1 className="py-10 text-3xl font-bold md:text-3xl dark:text-pink-700 text-violet-400">{children}</h1>,
+        h2: ({children} :any) => <h2 className="py-10 text-3xl font-bold md:text-3xl dark:text-pink-700 text-violet-400">{children}</h2>,
         normal: ({children} :any) => <h5 className="text-md text-gray-800 dark:text-gray-200">{children}</h5>,
-        h4 : ({children} :any) => <div className="text-sm text-center text-gray-500">{children}</div>,
+        h4 : ({children} :any) => <div className="py-10 text-sm text-center text-gray-500">{children}</div>,
         blockquote: ({children} :any) => <blockquote className="border-l-[#F7AB0A] border-l-4 pl-5 py-5 my-5">{children}</blockquote>,
         code: ({children} :any) => <code className="text-gray-500 dark:text-gray-200">{children}</code>,
     },

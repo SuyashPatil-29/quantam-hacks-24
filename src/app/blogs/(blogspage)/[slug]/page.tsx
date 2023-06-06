@@ -1,13 +1,33 @@
 import { groq } from 'next-sanity'
 import React from 'react'
-import { client } from '../../../../lib/sanity.client'
+import { client } from '../../../../../lib/sanity.client'
 import { PortableText } from '@portabletext/react'
 import { RichTextComponents } from '@/app/components/RichTextComponents'
+import Header from '@/app/components/Header'
+import Banner from '@/app/components/Banner'
+import Footer from '@/app/components/footer'
 
 type Props = {
   params: {
     slug: string
   }
+}
+
+export async function generateMetadata({params :{slug}}:Props) {
+  const query = groq`
+    *[_type == "post" && slug.current == $slug][0]
+    {
+      ...,
+      author->,
+      categories[]->
+    }
+  `
+
+  const post = await client.fetch(query,{slug})
+  
+  return {
+    title: post.title,
+  } 
 }
 
 
@@ -25,8 +45,11 @@ async function Post({params :{slug}}:Props) {
   const post = await client.fetch(query,{slug})
   
   return (
-    <div>
-      <div className="">
+    <div  className='lg:mx-[162px]'>
+      <header>
+            <Header />
+        </header>
+      <div>
           <p className="text-md text-gray-800 dark:text-gray-200 grid place-content-center lg:-mb-3">
           {new Date(post._createdAt).toLocaleDateString(
                         'en-US', {
@@ -44,6 +67,10 @@ async function Post({params :{slug}}:Props) {
       <article>
         <PortableText value={post.body} components={RichTextComponents} />
       </article>
+      <footer>
+                <hr className="border-[#F7AB0A] my-14 dark:bg-white bg-black dark:h-0 h-1"/>
+                <Footer />
+            </footer>
     </div>
   )
 }
