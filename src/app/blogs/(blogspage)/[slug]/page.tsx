@@ -64,7 +64,7 @@ async function Post({params :{slug}}:Props) {
 
       <hr className="border-[#F7AB0A] my-14 dark:bg-white bg-black dark:h-0 h-1"/>
 
-      <article>
+      <article className="lg:mx-0 mx-4">
         <PortableText value={post.body} components={RichTextComponents} />
       </article>
       <footer>
