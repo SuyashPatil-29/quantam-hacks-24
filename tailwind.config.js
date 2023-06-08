@@ -14,5 +14,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("daisyui", "@tailwindcss/line-clamp", 'flowbite/plugin')],
+  plugins: [require("daisyui")],
 }

@@ -1,6 +1,5 @@
 "use client"
 
-import Link from 'next/link'
 import React from 'react'
 import { groq } from 'next-sanity';
 import { client } from '../../../../../lib/sanity.client';
@@ -9,6 +8,7 @@ import Banner from '@/app/components/Banner';
 import Footer from '@/app/components/footer';
 import { useSearchParams } from 'next/navigation';
 import { Post } from '../../../../../type';
+import Link from 'next/link';
 
 export const query = groq`
 *[_type == "post"]{
@@ -21,7 +21,7 @@ categories[]->
 
 
 export default async function Category() {
-
+    
     const searchParams = useSearchParams();
     const search = searchParams.get("category");
 
@@ -36,7 +36,7 @@ export default async function Category() {
         {posts.map((post) =>{
             if(post.categories.some((category) => category.title === search)){
                 return (
-                    <Link href={`blogs/${post.slug.current}`} key={post._id} className="flex lg:flex-row flex-col flex-start lg:gap-32">
+                    <Link as={`/blogs/${post.slug.current}`} href={`blogs/${post.slug.current}`} key={post._id} className="flex lg:flex-row flex-col flex-start lg:gap-32">
                     <div className="mt-6 text-xl">
                     <p key={post._id} className="text-md text-gray-800 dark:text-gray-200 grid lg:place-content-center lg:mr-0 ml-5 -mb-5">
                         {new Date(post._createdAt).toLocaleDateString(

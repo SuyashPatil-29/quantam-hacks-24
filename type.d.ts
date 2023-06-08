@@ -17,6 +17,7 @@ interface Post extends Base{
     slug : Slug,
     title :string,
     description :string,
+    post :any
 }
 
 interface Author extends Base{

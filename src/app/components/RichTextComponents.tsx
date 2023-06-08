@@ -1,6 +1,7 @@
 import React from 'react'
 import urlFor from '../../../lib/urlFor'
 import Link from 'next/link'
+import Image from 'next/image'
 
 
 export const RichTextComponents = {
@@ -8,7 +9,7 @@ export const RichTextComponents = {
         image: ({value} :any) => {
             return (
                 <div className='relative w-full h-96 m-10 mx-auto'>
-                    <img src = {urlFor(value).url()} alt = "Blog Post Image" className='object-contain w-full'/>
+                    <Image src = {urlFor(value).url()} alt = "Blog Post Image" className='object-contain w-full' fill/>
                 </div>
             )
         }
@@ -19,7 +20,7 @@ export const RichTextComponents = {
             <ul className="ml-10 py-5 list-disc space-y-5">{children}</ul>
         ),
         number: ({children} :any) =>(
-        <ol className="mt-lg">{children}</ol>
+            <ol className="mt-lg">{children}</ol>
         )
     },
 

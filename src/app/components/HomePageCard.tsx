@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 const HomePageCard = (props :any) => {
     return (
-        <Link href={`${props.link}`}>
+        <Link href={`${props.link}`} as={`${props.link}`}>
         <div className="bg-white border-gray-200 dark:bg-transparent border-2 dark:border-gray-300 rounded-3xl hover:transform hover:scale-105 dark:shadow-none shadow-2xl transition-all duration-500 min-h-[400px] relative">
-            <img className=" rounded-t-3xl h-[200px] object-cover min:w-[400px] w-full" src={props.image} alt="home" />
+            <Image className=" rounded-t-3xl h-[200px] object-cover min:w-[400px] w-full" src={props.image} alt="home" height={200} width={400} />
         <div className="p-5">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{props.heading}</h5>
                 <p className='absolute bottom-14 left-3'>By - {props.author}</p>
