@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { IoIosArrowDropupCircle } from 'react-icons/io';
-import clsxm from '../../../lib/utils';
 
 export default function ScrollToTop() {
   const [goToTop, setgoToTop] = useState(false);
@@ -29,14 +28,7 @@ export default function ScrollToTop() {
     <button
       onClick={toTop}
       aria-label='Click here to scroll to top'
-      className={clsxm(
-        'h1 fixed lg:right-14 right-4 bottom-10 lg:bottom-14 z-50 rounded-full bg-base-100 text-pink-500 h-20 w-20 transition-all duration-300',
-
-        goToTop
-          ? 'translate-y-0 opacity-100'
-          : 'cursor-pointer-none invisible translate-y-4 opacity-0'
-      )}
-    >
+      className={ goToTop ? 'fixed lg:right-14 right-4 bottom-10 lg:bottom-14 z-50 rounded-full bg-base-100 text-pink-500 h-20 w-20 transition-all duration-300' : 'hidden'}>
       <IoIosArrowDropupCircle className='w-full h-full'/>
     </button>
   );
