@@ -4,7 +4,7 @@ import BlogList from "../components/BlogList";
 import Link from "next/link";
 import { Post } from "../../../type";
 
-export const query = groq`
+const query = groq`
 *[_type == "post"]{
   ...,
   author->,

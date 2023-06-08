@@ -7,7 +7,7 @@ import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Footer from '../components/footer';
 
-export const query = groq`
+const query = groq`
 *[_type == "post"]{
 ...,
 author->,

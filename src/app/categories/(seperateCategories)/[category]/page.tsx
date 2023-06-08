@@ -10,7 +10,7 @@ import { useSearchParams } from 'next/navigation';
 import { Post } from '../../../../../type';
 import Link from 'next/link';
 
-export const query = groq`
+const query = groq`
 *[_type == "post"]{
 ...,
 author->,
