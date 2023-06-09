@@ -9,6 +9,7 @@ import Footer from '@/app/components/footer'
 import Link from 'next/link'
 import ScrollToTop from '@/app/components/ScrollToTop'
 import { Post } from '../../../../../type'
+import { Metadata } from 'next'
 
 type Props = {
   params: {
@@ -27,6 +28,8 @@ export async function generateStaticParams() {
   const slug :Post[] = await client.fetch(query)
   const slugRoutes = slug.map((slug)=>slug.slug.current)
 
+  console.log(slug);
+  
   return slugRoutes.map((slug)=>({
     slug,
   }))
@@ -43,11 +46,10 @@ async function Post({params :{slug}}:Props) {
     }
   `
 
-
   const post = await client.fetch(query,{slug})
   
   return (
-    <div  className='lg:mx-[162px]'>
+    <div  className='lg:mx-[162px] min-h-screen'>
       <header>
             <Header />
         </header>
@@ -74,7 +76,7 @@ async function Post({params :{slug}}:Props) {
       <article className="lg:mx-0 mx-4">
         <PortableText value={post.body} components={RichTextComponents} />
       </article>
-      <ScrollToTop />
+        <ScrollToTop />
       <footer>
                 <div className= " my-10 justify-end dark:text-green-400 text-green-500 flex hover:opacity-80">
                   <Link href="/blogs" as={"/blogs"} className="inline-flex items-center px-3 lg:py-2 pr-5 text-md font-medium text-center">

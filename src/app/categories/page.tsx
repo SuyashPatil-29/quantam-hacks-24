@@ -43,7 +43,7 @@ export default async function Post() {
             <div className="grid grid-cols-3 gap-2">
             {categories.map((category :Props) => {
                 return (
-                    <Link href={`/categories/category?category=${category.title}`} as={`/categories/category?category=${category.title}`} key={category.title} className="text-center text-md dark:text-[#F7AB0A] font-medium text-black hover:text-pink-500">{category.title}</Link>)}
+                    <Link href={`/categories/category?category=${category.title}`} as={`/categories/category?category=${category.title}`} key={category.title} className="text-center text-md text-[#F7AB0A] font-medium  hover:text-pink-500">{category.title}</Link>)}
                     )}
             </div>
             </div>

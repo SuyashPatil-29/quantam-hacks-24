@@ -4,7 +4,7 @@ import { IoIosArrowDropupCircle } from 'react-icons/io';
 export default function ScrollToTop() {
   const [goToTop, setgoToTop] = useState(false);
   const showBtn = () => {
-    if (window.scrollY > 200) {
+    if (window.scrollY > 100) {
       setgoToTop(true);
     } else {
       setgoToTop(false);
