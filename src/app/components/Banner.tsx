@@ -7,7 +7,7 @@ type props ={
 function Banner({heading} :props) {
   return (
     <div className=" flex items-center justify-between">
-    <div  className="text-3xl font-bold dark:text-white text-black grid lg:place-content-start place-content-center">
+    <div  className="text-3xl font-bold dark:text-white ml-4 lg:ml-0 text-black grid lg:place-content-start place-content-center">
         <h1>{heading}</h1>
     </div>
     <div className= " my-6 justify-end dark:text-green-400 text-green-500 flex hover:opacity-80">

@@ -14,12 +14,12 @@ const Header = () => {
                     <h1 className='lg:text-4xl text-3xl font-bold tracking-wider dark:text-white text-black'>Suyash Patil</h1>
                 </Link>
             </div>
-            <ul className='lg:flex hidden items-center lg:gap-11 gap-5'>
+            <ul className='lg:flex md:flex hidden items-center lg:gap-11 gap-5'>
                 <Link href="/blogs" as={`/blogs`} className="text-lg font-semibold hover:text-pink-500 dark:hover:text-pink-900 dark:text-white text-black">Blogs</Link>
                 <Link href="/categories" as={`/categories`} className="text-lg font-semibold hover:text-pink-500 dark:hover:text-pink-900 dark:text-white text-black">Categories</Link>
                 <Link href="/about" as={`/about`} className="text-lg font-semibold hover:text-pink-500 dark:hover:text-pink-900 dark:text-white text-black">About</Link>
             </ul>
-            <button className='lg:hidden block mr-4' onClick={() => setOpen((p) => !p)}>
+            <button className='lg:hidden md:hidden block mr-4' onClick={() => setOpen((p) => !p)}>
             <span className='sr-only'>Menu</span>
             <svg
               className='h-6 w-6 dark:text-white text-black'

@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className=" min-h-screen ">
       <header className='lg:mx-[162px]'>
       <Header />
       <Banner heading='About'/>
