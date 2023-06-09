@@ -11,7 +11,7 @@ const Header = () => {
         <div className='flex justify-between lg:mx-0 mx-3 items-center text-white dark:bg-transparent bg-white py-[40px] mb-9'>
             <div>
                 <Link href="/">
-                    <h1 className='text-4xl font-bold tracking-wider dark:text-white text-black'>Suyash Patil</h1>
+                    <h1 className='lg:text-4xl text-3xl font-bold tracking-wider dark:text-white text-black'>Suyash Patil</h1>
                 </Link>
             </div>
             <ul className='lg:flex hidden items-center lg:gap-11 gap-5'>
@@ -19,10 +19,10 @@ const Header = () => {
                 <Link href="/categories" as={`/categories`} className="text-lg font-semibold hover:text-pink-500 dark:hover:text-pink-900 dark:text-white text-black">Categories</Link>
                 <Link href="/about" as={`/about`} className="text-lg font-semibold hover:text-pink-500 dark:hover:text-pink-900 dark:text-white text-black">About</Link>
             </ul>
-            <button className='lg:hidden block' onClick={() => setOpen((p) => !p)}>
+            <button className='lg:hidden block mr-4' onClick={() => setOpen((p) => !p)}>
             <span className='sr-only'>Menu</span>
             <svg
-              className='h-6 w-6'
+              className='h-6 w-6 dark:text-white text-black'
               xmlns='http://www.w3.org/2000/svg'
               fill='none'
               viewBox='0 0 24 24'

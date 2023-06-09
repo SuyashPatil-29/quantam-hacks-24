@@ -12,12 +12,14 @@ const query = groq`
 } | order(_createdAt desc)
 `;
 
+export const revalidate = 60
+
 export default async function Home() {
 
   const posts :Post[] = await client.fetch(query);
   
   return (
-    <div>
+    <div className="min-h-screen">
        <BlogList posts={posts.slice(0,10)}/>
        <div className= " my-10 justify-end dark:text-green-400 text-green-500 flex hover:opacity-80">
        <Link href="/blogs" as={"/blogs"} className="inline-flex items-center px-3 lg:py-2 pr-5 text-md font-medium text-center">
