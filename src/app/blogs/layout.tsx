@@ -17,7 +17,7 @@ export default function BlogsLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="min-h-screen flex flex-col justify-between">
         {children}
       </body>
     </html>

@@ -73,7 +73,7 @@ async function Post({params :{slug}}:Props) {
                 </div>
       <hr className="border-[#F7AB0A] my-14 dark:bg-white bg-black dark:h-0 h-1" id='top'/>
 
-      <article className="lg:mx-0 mx-4">
+      <article className="lg:mx-0 mx-[30px]">
         <PortableText value={post.body} components={RichTextComponents} />
       </article>
         <ScrollToTop />
