@@ -20,7 +20,7 @@ const HomePageCard = (props :any) => {
                         )}
                </p>
 
-                <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 absolute bottom-4 right-3">
+                <div className="flex md:flex-col flex-row gap-y-2 md:gap-x-2 absolute bottom-4 right-3">
                 {props.category.map((category :any)=>{
                     return (
                         <div key={category._id} className="bg-[#F7AB0A] text-center text-black px-3 py-1 rounded-full text-sm font-semibold">

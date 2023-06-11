@@ -8,7 +8,7 @@ export const RichTextComponents = {
     types: {
         image: ({value} :any) => {
             return (
-                <div className='relative w-full h-96 m-5 mx-auto'>
+                <div className='relative w-full h-96 lg:m-5 mx-auto'>
                     <Image src = {urlFor(value).url()} alt = "Blog Post Image" className='object-contain w-full' fill/>
                 </div>
             )

@@ -34,15 +34,17 @@ export default async function Category() {
             <Banner heading='All Posts' />
             <hr className="border-[#F7AB0A] my-14 dark:bg-white bg-black dark:h-0 h-1"/>
         </header>
+        <div className="justify-around">
         {posts.map((post) =>{
             if(post.categories.some((category) => category.title === search)){
                 return (
                     <BlogLinksPage key={post._id} post={post}/>
-                )
+                    )
+                }
             }
-         }
-        )
+            )
         }
+        </div>
         <footer>
             <hr className="border-[#F7AB0A] my-14 dark:bg-white bg-black dark:h-0 h-1"/>
             <Footer />
