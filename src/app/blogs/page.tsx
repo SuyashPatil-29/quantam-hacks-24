@@ -22,22 +22,13 @@ export default async function Blogs() {
 
   const posts :Post[] = await client.fetch(query);
   return (
-    <div  className='lg:mx-[162px] min-h-screen flex flex-col justify-between'>
-        <header>
-            <Header />
-            <Banner heading='All Posts' />
-            <hr className="border-[#F7AB0A] my-14 dark:bg-white bg-black dark:h-0 h-1"/>
-        </header>
+    <div  className='flex flex-col justify-between'>
         <div className="justify-around">
           {posts.map(post => {
             return(
               <BlogLinksPage key={post._id} post={post}/>
               )})}
         </div>
-            <footer>
-                <hr className="border-[#F7AB0A] my-14 dark:bg-white bg-black dark:h-0 h-1"/>
-                <Footer />
-            </footer>
     </div>
   )
 }

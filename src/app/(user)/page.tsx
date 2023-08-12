@@ -1,32 +1,32 @@
-import groq from 'groq'
-import { client } from "../../../lib/sanity.client";
-import BlogList from "../components/BlogList";
-import Link from "next/link";
-import { Post } from "../../../type";
-
-const query = groq`
-*[_type == "post"]{
-  ...,
-  author->,
-  categories[]->
-} | order(_createdAt desc)
-`;
+import Approach from "@/app/components/Approach";
+import TechStack from "../components/TechStack"
+import {Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle,} from "@/components/ui/card"
+import Image from 'next/image';
 
 export const revalidate = 60
 
 export default async function Home() {
-
-  const posts :Post[] = await client.fetch(query);
   
   return (
-    <div className="min-h-screen">
-       <BlogList posts={posts.slice(0,10)}/>
-       <div className= " my-10 justify-end dark:text-green-400 text-green-500 flex hover:opacity-80">
-       <Link href="/blogs" as={"/blogs"} className="inline-flex items-center px-3 lg:py-2 pr-5 text-md font-medium text-center">
-            Read more
-            <svg aria-hidden="true" className="w-4 h-4 ml-2 -mr-1 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
-       </Link>
-    </div>
+    <div className='mt-20'>
+      <div className='flex items-center justify-between gap-6'>
+        <Card className='flex items-center justify-center w-[400px]'>
+          <Image src="/images/NewPfp.jpg" alt="logo" width={250} height={250} className='rounded-3xl' />
+        </Card>
+
+        <Card>
+          <CardHeader>About me</CardHeader>
+          <CardContent>
+            Hello, I am a Self Taught Software Engineer based in Bengaluru, India. I focus on creating experiences that put people and their stories first. I love creating things that I could see people interact with and enjoy.
+            <br /><br />
+            My focus is strategy, design & user experience. I am a craftsman at heart and take pride in mastering all aspects of the design process, from initial concepts to all levels of implementation. I care about the details and maintain consistent quality in everything I do.
+          </CardContent>
+        </Card>
+      </div>
+
+      <Approach />
+
+      <TechStack />
     </div>
   )
 }

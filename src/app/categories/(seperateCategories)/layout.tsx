@@ -1,5 +1,8 @@
+import Header from "@/app/components/Header";
 import "../../../styles/globals.css"
 import { Inter } from 'next/font/google'
+import Banner from "@/app/components/Banner";
+import Footer from "@/app/components/footer";
 
 
 
@@ -15,5 +18,18 @@ export default function BlogsLayout({
   }: {
     children: React.ReactNode;
   }) {
-    return <section>{children}</section>;
+    return(
+      <section className="min-h-screen lg:mx-[262px] flex flex-col justify-between">
+        <header>
+            <Header />
+            <Banner heading='All Posts' />
+            <hr className="border-[#F7AB0A] my-14 bg-white h-0"/>
+        </header>
+        {children}
+        <footer>
+            <hr className="border-[#F7AB0A] my-14 bg-white h-0"/>
+            <Footer />
+        </footer>
+      </section>
+      )
   }

@@ -11,10 +11,6 @@ export const metadata = {
 }
 
 
-export default function BlogsPageLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function BlogsPageLayout({children,}: {children: React.ReactNode;}) {
   return <section>{children}</section>;
 }

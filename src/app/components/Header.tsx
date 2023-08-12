@@ -18,10 +18,10 @@ const Header: React.FC = () => {
 
   return (
     <div>
-      <div className='flex justify-between lg:mx-0 mx-3 items-center text-white dark:bg-transparent bg-white py-8 mb-9'>
+      <div className='flex justify-between lg:mx-0 mx-3 items-center text-white dark:bg-transparent py-8 mb-9'>
         <div>
           <Link href="/">
-            <h1 className='lg:text-4xl text-3xl font-bold tracking-wider dark:text-white text-black cursor-pointer'>Suyash Patil</h1>
+            <h1 className='lg:text-4xl text-3xl font-bold tracking-wider dark:text-white cursor-pointer'>Suyash Patil</h1>
           </Link>
         </div>
         <ul className='lg:flex md:flex hidden items-center lg:gap-11 gap-5'>
@@ -32,7 +32,7 @@ const Header: React.FC = () => {
         <button className='lg:hidden md:hidden block mr-4' onClick={toggleMenu}>
           <span className='sr-only'>Menu</span>
           <svg
-            className={`h-6 w-6 text-black dark:text-white`}
+            className={`h-6 w-6 text-white`}
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
             viewBox='0 0 24 24'
@@ -54,7 +54,7 @@ const Header: React.FC = () => {
 
 const NavItem: React.FC<NavItemProps> = ({ href, text }) => (
   <li>
-    <Link href={href} as={href}className='text-lg font-semibold hover:text-pink-500 dark:hover:text-pink-900 dark:text-white text-black cursor-pointer'>
+    <Link href={href} as={href} className='text-xl font-semibold hover:text-pink-900 text-white cursor-pointer'>
       {text}
     </Link>
   </li>

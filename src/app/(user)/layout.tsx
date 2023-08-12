@@ -19,16 +19,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-      <header className='lg:mx-[162px] md:mx-[100px]'>
+      <body className="min-h-screen lg:mx-[150px] md:mx-[100px]">
+      <header>
       <Header />
-      <Banner heading='Latest Posts' />
-      <hr className="border-[#F7AB0A] my-14 dark:bg-white bg-black dark:h-0 h-1"/>
-        {children}
       </header>
-        <footer className='mt-20'>
-          <Footer />
-        </footer>
+
+        {children}
+      
+      <footer className='mt-20'>
+        <Footer />
+      </footer>
       </body>
     </html>
   )
