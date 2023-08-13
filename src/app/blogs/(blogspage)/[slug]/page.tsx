@@ -62,10 +62,9 @@ async function Post({ params: { slug } }: Props) {
   const nextPostSlug = await client.fetch(nextQuery, { createdAt: post._createdAt });
 
   return (
-    <div className='lg:mx-[262px] min-h-screen'>
-      <header>
+    <div className='min-h-screen'>
+      <header className='lg:mx-[150px]'>
         <Header />
-      </header>
       <div>
         <p className="text-md text-gray-200 grid place-content-center lg:-mb-3">
           {new Date(post._createdAt).toLocaleDateString('en-US', {
@@ -87,18 +86,19 @@ async function Post({ params: { slug } }: Props) {
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
-          >
+            >
             <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
           </svg>
         </Link>
       </div>
       <hr className="border-[#F7AB0A] my-14 =bg-white h-0" id='top'/>
+      </header>
 
-      <article className="lg:mx-0 md:mx-[30px] mx-4">
+      <article className="lg:mx-[362px] md:mx-[30px] mx-4">
         <PortableText value={post.body} components={RichTextComponents} />
       </article>
       <ScrollToTop />
-      <footer>
+      <footer className='lg:mx-[150px]'>
 <div className="flex justify-between text-green-400 my-10 hover:opacity-80">
         {prevPostSlug ? (
           <Link href={`/blogs/${prevPostSlug.slug}`} passHref>

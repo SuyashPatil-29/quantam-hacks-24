@@ -21,13 +21,12 @@ export default async function Post() {
       
     const categories = await client.fetch(query)
 
-    console.log(categories);
-    
-
     return (
         <div className="h-full min-h-screen flex flex-col justify-between">
-        <header className= "lg:mx-[262px] bg-transparent">
+        <header className= "lg:mx-[150px] bg-transparent">
             <Header />
+
+            <div className='lg:mx-[112px]'>
             <h1 className="text-3xl font-bold text-white grid lg:place-content-start place-content-center">All Categories</h1>
                 
             <div className= "justify-start text-green-400  flex hover:opacity-80 pt-7 lg:mx-0 mx-3">
@@ -36,9 +35,12 @@ export default async function Post() {
                     <svg aria-hidden="true" className="w-4 h-4 -mr-1 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
                 </Link>
             </div>
-
             <hr className="border-[#F7AB0A] my-10 bg-white h-0"/>
-            </header>
+            </div>
+        </header>
+
+        <div className='lg:mx-[262px]'>
+
             <div className="flex items-center justify-center my-20  lg:mx-0 mx-4">
             <div className="mr-3 border-r-4 border-white">
                 <h1 className="pr-3 text-3xl font-semibold text-white">Tags</h1>
@@ -50,6 +52,7 @@ export default async function Post() {
                     )}
             </div>
             </div>
+        </div>
             <footer className="">
             <Footer />
             </footer>
