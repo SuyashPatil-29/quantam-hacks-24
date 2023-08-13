@@ -21,21 +21,7 @@ export default function BlogsLayout({
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col justify-between">
-        <header className="mx-[150px]">
-            <Header />
-        </header>
-
-        <main className="mx-[262px]">
-          <Banner heading='All Posts' />
-          <hr className="border-[#F7AB0A] my-14 bg-white h-0"/>
           {children}
-          <hr className="border-[#F7AB0A] my-14 bg-white h-0"/>
-        </main>
-
-        <footer>
-          <Footer />
-        </footer>
-
       </body>
     </html>
   )
