@@ -27,7 +27,7 @@ const Header: React.FC = () => {
         <ul className='lg:flex md:flex hidden items-center lg:gap-11 gap-5'>
           <NavItem href="/blogs" text="Blogs" />
           <NavItem href="/categories" text="Categories" />
-          <NavItem href="/about" text="About" />
+          <NavItem href="/contact" text="Contact" />
         </ul>
         <button className='lg:hidden md:hidden block mr-4' onClick={toggleMenu}>
           <span className='sr-only'>Menu</span>

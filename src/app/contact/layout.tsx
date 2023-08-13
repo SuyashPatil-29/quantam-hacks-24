@@ -19,15 +19,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col justify-between">
-      <header className='lg:mx-[162px] md:mx-[100px]'>
+      <header className='lg:mx-[150px] md:mx-[100px]'>
       <Header />
-      <Banner heading='About'/>
-      <hr className="border-[#F7AB0A] my-14 dark:bg-white bg-black dark:h-0 h-1"/>
-        {children}
       </header>
-        <footer className='mt-20'>
-          <Footer />
-        </footer>
+
+      <main className="mx-[162px]">
+        {children}
+      </main>
+
+      <footer className='mt-20'>
+        <Footer />
+      </footer>
+
       </body>
     </html>
   )
