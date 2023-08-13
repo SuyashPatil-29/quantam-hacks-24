@@ -8,13 +8,13 @@ export const revalidate = 60
 export default async function Home() {
   
   return (
-    <div className='mt-20'>
+    <div>
       <div className='flex items-center justify-between gap-6'>
         <Card className='flex items-center justify-center w-[400px]'>
           <Image src="/images/NewPfp.jpg" alt="logo" width={300} height={300} className='rounded-3xl' />
         </Card>
 
-        <Card>
+        <Card className="">
           <CardHeader>About me</CardHeader>
           <CardContent>
             Hello, I am a Self Taught Software Engineer based in Bengaluru, India. I focus on creating experiences that put people and their stories first. I love creating things that I could see people interact with and enjoy.
