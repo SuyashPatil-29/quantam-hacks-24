@@ -8,12 +8,12 @@ export const revalidate = 60
 export default async function Home() {
   
   return (
-      <div className='flex flex-col md:flex-row items-center justify-between md:gap-6 gap-3 md:mx-0 mx-3'>
-        <Card className='flex items-center justify-center md:w-[400px] w-full'>
+      <div className='flex flex-col md:flex-row items-start justify-between md:gap-6 gap-3 md:mx-0 mx-3'>
+        <Card className='flex items-center min-h-[400px] justify-center md:w-[400px] w-full'>
           <Image src="/images/NewPfp.jpg" alt="logo" width={300} height={300} className='rounded-3xl' />
         </Card>
 
-        <Card className="min-h-fit mb-3">
+        <Card className="md:h-[400px] mb-3">
           <CardHeader>About me</CardHeader>
           <CardContent>
             Hello, I am a Self Taught Software Engineer based in Bengaluru, India. I focus on creating experiences that put people and their stories first. I love creating things that I could see people interact with and enjoy.
