@@ -6,15 +6,15 @@ import React from 'react';
 const About = () => {
 
     return (
-        <div className='flex justify-between items-center gap-5'>
-         <Card className='w-1/4 flex flex-col justify-evenly h-[500px]'>
+        <div className='flex md:flex-row flex-col justify-between items-center md:gap-5 gap-3'>
+         <Card className='md:w-1/4 w-screen flex flex-col justify-evenly h-[500px] px-6'>
             <div className='flex gap-3 items-center'>
                 <div className='p-6 border border-[#F7AB0A]/30 bg-[rgb(26,26,26) rounded-2xl'>
                     <Image src="/svgs/email.svg" width={25} height={25} alt='Email' className='text-white'/>
                 </div>
                 <div className='flex flex-col text'>
                     <p className='text-[rgb(87,87,87)] text-xl'>E-mail</p>
-                    <p className='text-[rgb(188,188,188)] text-xl'>patilsuyash892@gmail.com</p>
+                    <p className='text-[rgb(188,188,188)] md:text-xl text-sm'>patilsuyash892@gmail.com</p>
                 </div>
             </div>
             <div className='flex gap-3 items-center'>
@@ -36,7 +36,7 @@ const About = () => {
                 </div>
             </Link>
          </Card>
-         <Card className='w-3/4 h-[500px]'>
+         <Card className='w-screen md:w-3/4 md:h-[500px] md:mb-0 mb-10'>
             <CardHeader><p className='text-4xl font-thin'>Lets get in <span className='text-[#F7AB0A]'>touch</span></p></CardHeader>
             <form>
             <input

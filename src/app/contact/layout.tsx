@@ -1,8 +1,7 @@
 import "../../styles/globals.css"
 import { Inter } from 'next/font/google'
 import Header from '../components/Header'
-import Banner from '../components/Banner'
-import Footer from '../components/footer'
+import HomePageFooter from "../components/HomePageFooter"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,12 +22,12 @@ export default function RootLayout({
       <Header />
       </header>
 
-      <main className="mx-[162px]">
+      <main className="md:mx-[162px] mx-10">
         {children}
       </main>
 
-      <footer className='mt-20'>
-        <Footer />
+      <footer>
+        <HomePageFooter />
       </footer>
 
       </body>

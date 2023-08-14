@@ -8,7 +8,7 @@ function HeaderMenu() {
       <hr className="w-full border-b-2 border-pink-500"/>
       <li className='w-full'><Link href="/categories" as={`/categories`} className=" place-content-center text-lg font-semibold hover:text-pink-900 text-white">Categories</Link></li>
       <hr className="w-full border-b-2 border-pink-500"/>
-      <li className='w-full'><Link href="/about" as={`/about`} className=" place-content-center text-lg font-semibold hover:text-pink-900 text-white">About</Link></li>
+      <li className='w-full'><Link href="/about" as={`/contact`} className=" place-content-center text-lg font-semibold hover:text-pink-900 text-white">Contact</Link></li>
       <hr className="w-full border-b-2 border-pink-500"/>
     </ul>
   )

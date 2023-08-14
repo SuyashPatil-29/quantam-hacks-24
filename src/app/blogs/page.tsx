@@ -23,12 +23,12 @@ export default async function Blogs() {
   const posts :Post[] = await client.fetch(query);
   return (
     <div  className='flex flex-col justify-between'>
-        <header className="mx-[150px]">
+        <header className="md:mx-[150px]">
             <Header />
         </header>
 
 
-        <main className="mx-[262px]">
+        <main className="md:mx-[262px]">
         <Banner heading='All Posts' />
         <hr className="border-[#F7AB0A] my-14 bg-white h-0"/>
 
