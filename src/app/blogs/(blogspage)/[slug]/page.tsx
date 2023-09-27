@@ -91,7 +91,7 @@ async function Post({ params: { slug } }: Props) {
           </svg>
         </Link>
       </div>
-      <hr className="border-[#F7AB0A] my-14 =bg-white h-0" id='top'/>
+      <hr className="border-[#F7AB0A] my-14 bg-white h-0" id='top'/>
       </header>
 
       <article className="lg:mx-[362px] md:mx-[30px] mx-4">
