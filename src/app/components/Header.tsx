@@ -21,7 +21,7 @@ const Header: React.FC = () => {
       <div className='flex justify-between lg:mx-0 mx-3 items-center text-white dark:bg-transparent py-8 mb-9'>
         <div>
           <Link href="/">
-            <h1 className='lg:text-4xl text-3xl font-bold tracking-wider dark:text-white cursor-pointer'>Suyash Patil</h1>
+            <h1 className='lg:text-4xl text-3xl font-bold tracking-wider dark:text-white cursor-pointer'>Byte Busters</h1>
           </Link>
         </div>
         <ul className='lg:flex md:flex hidden items-center lg:gap-11 gap-5'>
