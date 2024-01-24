@@ -6,6 +6,7 @@ import { useChat } from "ai/react";
 import { ArrowRightCircle, Copy, Loader2 } from "lucide-react";
 import { FormEvent, useState } from "react";
 import Image from "next/image";
+import { MarkdownRenderer } from "@/app/components/MarkdownRenderer";
 
 export default function Chat() {
   const {
@@ -63,7 +64,7 @@ export default function Chat() {
 
     // Call both textSubmit and handleImageSubmit
     handleTextSubmit(e);
-    await handleImageSubmit(e);
+    // await handleImageSubmit(e);
   };
 
   const handleCopyClick = (content: string) => {
@@ -89,7 +90,7 @@ export default function Chat() {
           />
           {messages.map((m) => (
             <div key={m.id} className="whitespace-pre-wrap">
-              {m.role === "assistant" && <div>{m.content}</div>}
+              {m.role === "assistant" && <MarkdownRenderer content={m.content}/>}
             </div>
           ))}
         </div>
